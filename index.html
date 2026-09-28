@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mylena Caroline | Psicóloga & Psicopedagoga | Clínica Florescer</title>
+    <meta name="description" content="Cuidado profissional e acolhedor para a sua saúde mental e desenvolvimento infantil. Atendimento presencial em Ribeirão Preto e online para todo o Brasil.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mylena Caroline | Psicóloga & Psicopedagoga">
+    <meta property="og:description" content="Clínica Florescer em Saúde e Desenvolvimento - Psicoterapia para adultos, psicopedagogia e orientação parental.">
+    <meta property="og:image" content="assets/images/mylena-perfil.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            'gold-hover': '#B08C45',
+                            'gold-light': '#F7F2E7',
+                            sand: '#EFE7DC',
+                            bg: '#FAF7F2',
+                            'bg-card': '#FFFFFF',
+                            dark: '#2A2421',
+                            muted: '#6E6661',
+                            rose: '#E8D5CE',
+                            'rose-light': '#FBF6F4',
+                            border: '#E8DFD5'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Smooth Transitions and Premium Feel */
+        ::selection {
+            background: #C5A059;
+            color: #FFFFFF;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B88B4A 0%, #D8B775 50%, #9E7432 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(#C5A059 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+            opacity: 0.15;
+        }
+
+        .glass-header {
+            background: rgba(250, 247, 242, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .custom-shadow {
+            box-shadow: 0 15px 35px -5px rgba(42, 36, 33, 0.05), 0 5px 15px rgba(197, 160, 89, 0.05);
+        }
+
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(197, 160, 89, 0.15);
+            border-color: #C5A059;
+        }
+
+        /* Pulse animation for WhatsApp badge */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.15); opacity: 0.4; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .pulse-effect {
+            animation: pulse-ring 2.5s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans antialiased overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-dark text-[#EFE7DC] text-xs sm:text-sm py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+        <span>Atendimentos presenciais em <strong>Ribeirão Preto</strong> e sessões online para todo o Brasil.</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 glass-header border-b border-brand-border transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Brand Identity -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-brand-gold-light border border-brand-gold/40 flex items-center justify-center text-brand-gold group-hover:scale-105 transition-transform duration-300">
+                    <!-- Ψ Greek Psi Icon for Psychology -->
+                    <span class="font-serif text-2xl font-bold">Ψ</span>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-brand-dark block leading-none">
+                        Mylena Caroline
+                    </span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-muted font-medium mt-1 block">
+                        Psicóloga & Psicopedagoga
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
+                <a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre Mim</a>
+                <a href="#atuacao" class="hover:text-brand-gold transition-colors">Áreas de Atuação</a>
+                <a href="#espaco" class="hover:text-brand-gold transition-colors">O Consultório</a>
+                <a href="#faq" class="hover:text-brand-gold transition-colors">Dúvidas</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta." target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-hover text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-brand-gold/20 transform hover:-translate-y-0.5">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Agendar Sessão</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" aria-label="Abrir menu" class="md:hidden p-2 text-brand-dark hover:text-brand-gold focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-border px-6 py-5 transition-all">
+            <div class="flex flex-col gap-4 text-base font-medium text-brand-muted">
+                <a href="#sobre" class="mobile-nav-link hover:text-brand-gold py-1">Sobre Mim</a>
+                <a href="#atuacao" class="mobile-nav-link hover:text-brand-gold py-1">Áreas de Atuação</a>
+                <a href="#espaco" class="mobile-nav-link hover:text-brand-gold py-1">O Consultório</a>
+                <a href="#faq" class="mobile-nav-link hover:text-brand-gold py-1">Dúvidas Frequentes</a>
+                <div class="pt-3 border-t border-brand-border">
+                    <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 bg-brand-gold text-white font-medium py-3 rounded-xl shadow-md">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Agendar pelo WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+        <div class="absolute inset-0 hero-pattern pointer-events-none"></div>
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand-rose/40 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-32 w-96 h-96 rounded-full bg-brand-gold/15 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold-light border border-brand-gold/30 text-brand-gold text-xs sm:text-sm font-medium mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+                        <span>Florescer em Saúde & Desenvolvimento</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark font-medium leading-[1.15] mb-6">
+                        Cuidado especializado para a sua <em class="italic font-normal gold-gradient-text">saúde mental</em> e desenvolvimento integral.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-brand-muted font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+                        Um espaço seguro, ético e empático para adultos, crianças e famílias. Psicoterapia e psicopedagogia integradas para acolher suas dores e despertar suas potencialidades.
+                    </p>
+
+                    <!-- CTAs & Highlights -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold-hover text-white font-medium text-base px-8 py-4 rounded-full shadow-lg shadow-brand-gold/25 hover:shadow-xl hover:shadow-brand-gold/30 transition-all transform hover:-translate-y-0.5">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Agende sua Consulta</span>
+                        </a>
+
+                        <a href="#atuacao" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-gold-light/60 border border-brand-border text-brand-dark font-medium text-base px-7 py-4 rounded-full transition-colors shadow-sm">
+                            <span>Conhecer Abordagens</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-brand-gold"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Micro-Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-border/80 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark">Presencial</div>
+                            <div class="text-xs text-brand-muted mt-0.5">Ribeirão Preto - SP</div>
+                        </div>
+                        <div class="border-x border-brand-border px-2">
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark">Online</div>
+                            <div class="text-xs text-brand-muted mt-0.5">Brasil & Exterior</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark">Integrado</div>
+                            <div class="text-xs text-brand-muted mt-0.5">Psicologia & Aprendizagem</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Column -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative Frame Background -->
+                        <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-gold/30 via-brand-rose/30 to-brand-sand/50 filter blur-sm"></div>
+                        
+                        <!-- Main Card / Image -->
+                        <div class="relative bg-white rounded-2xl overflow-hidden border border-brand-border custom-shadow">
+                            <img src="assets/images/mylena-perfil.png" alt="Dra. Mylena Caroline Alves - Psicóloga e Psicopedagoga" class="w-full h-[460px] sm:h-[500px] object-cover object-top hover:scale-105 transition-transform duration-700">
+                            
+                            <!-- Floating Badge Bottom -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-xl p-4 border border-brand-border custom-shadow">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-brand-gold text-white flex items-center justify-center font-serif text-xl font-bold shadow-sm">
+                                        Ψ
+                                    </div>
+                                    <div>
+                                        <h2 class="text-sm font-semibold text-brand-dark leading-tight">Dra. Mylena Caroline Alves</h2>
+                                        <p class="text-xs text-brand-gold font-medium">CRP Ativo • Especialista em Aprendizagem</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Top Floating Pill -->
+                        <div class="absolute -top-4 -right-3 bg-white/95 backdrop-blur-md rounded-full py-2 px-4 border border-brand-border shadow-md flex items-center gap-2 text-xs font-medium text-brand-dark">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+                            <span>Ambiente Acolhedor & Privativo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ESSÊNCIA & SOBRE MIM -->
+    <section id="sobre" class="py-20 bg-white border-y border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Image & Aesthetics -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden border border-brand-border custom-shadow relative">
+                            <img src="assets/images/consultorio-adulto.png" alt="Consultório Psicológico Dra. Mylena Caroline" class="w-full h-[420px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <span class="text-xs uppercase tracking-widest text-brand-sand font-medium">Acolhimento & Escuta</span>
+                                <h2 class="font-serif text-2xl font-medium mt-1">Um refúgio para desacelerar e se reconectar</h2>
+                            </div>
+                        </div>
+
+                        <!-- Mini Floating Card -->
+                        <div class="absolute -bottom-6 -right-4 sm:right-6 bg-brand-bg rounded-xl p-4 border border-brand-border shadow-lg max-w-[240px]">
+                            <div class="flex items-center gap-2 text-brand-gold mb-1">
+                                <i data-lucide="heart" class="w-4 h-4 fill-brand-gold"></i>
+                                <span class="text-xs font-bold uppercase tracking-wider">Propósito</span>
+                            </div>
+                            <p class="text-xs text-brand-muted leading-relaxed">
+                                Ajudar cada indivíduo a florescer em sua própria singularidade e tempo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Presentation -->
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-gold uppercase block mb-3">Conheça a Profissional</span>
+                    
+                    <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-medium leading-tight mb-6">
+                        "Cuidar da mente é regar a própria essência para poder florescer com autonomia e leveza."
+                    </h2>
+
+                    <div class="space-y-4 text-brand-muted text-base leading-relaxed font-light">
+                        <p>
+                            Sou <strong>Mylena Caroline Alves</strong>, psicóloga clínica e psicopedagoga. Meu trabalho nasce da convicção de que todo ser humano merece um espaço seguro, livre de julgamentos, onde possa expressar suas angústias, compreender suas emoções e construir novos caminhos.
+                        </p>
+                        <p>
+                            Na clínica, integro a sensibilidade da escuta psicológica à precisão da psicopedagogia, atuando tanto no suporte emocional de adultos quanto na superação de bloqueios de aprendizagem e neurodesenvolvimento de crianças e jovens.
+                        </p>
+                    </div>
+
+                    <!-- Highlights Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-brand-border">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 rounded-lg bg-brand-gold-light text-brand-gold shrink-0">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-brand-dark">Abordagem Personalizada</h3>
+                                <p class="text-xs text-brand-muted mt-0.5">Terapia adaptada ao seu momento de vida e objetivos individuais.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 rounded-lg bg-brand-gold-light text-brand-gold shrink-0">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-brand-dark">Sigilo e Ética Absoluta</h3>
+                                <p class="text-xs text-brand-muted mt-0.5">Ambiente estritamente confidencial, seguindo o código de ética do CRP.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="atuacao" class="py-20 bg-brand-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-gold uppercase block mb-2">Especialidades Clínicas</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-medium">
+                    Como posso te ajudar a florescer
+                </h2>
+                <div class="w-16 h-0.5 bg-brand-gold mx-auto mt-4 mb-4"></div>
+                <p class="text-brand-muted text-base">
+                    Atendimentos estruturados para atender você e sua família em diferentes fases da vida.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Psicoterapia Adultos & Adolescentes -->
+                <div class="bg-white rounded-2xl p-8 border border-brand-border custom-shadow card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-gold-light text-brand-gold flex items-center justify-center mb-6">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold">Adultos & Jovens</span>
+                        <h3 class="font-serif text-2xl font-semibold text-brand-dark mt-1 mb-3">Psicoterapia Clínica</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6 font-light">
+                            Espaço dedicado ao autoconhecimento, regulação emocional e ressignificação de experiências dolorosas.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs sm:text-sm text-brand-dark">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Ansiedade e crises de pânico</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Depressão e desânimo persistente</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Autocobrança e esgotamento (Burnout)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Conflitos nos relacionamentos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-brand-border">
+                        <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Psicoterapia." target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold hover:text-brand-gold-hover group">
+                            <span>Agendar Psicoterapia</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Psicopedagogia Infantil -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-brand-gold/50 custom-shadow card-hover relative flex flex-col justify-between">
+                    <div class="absolute -top-3 right-6 bg-brand-gold text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
+                        Especialidade
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-rose/60 text-brand-dark flex items-center justify-center mb-6">
+                            <i data-lucide="book-open" class="w-7 h-7 text-brand-gold"></i>
+                        </div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold">Crianças & Pré-adolescentes</span>
+                        <h3 class="font-serif text-2xl font-semibold text-brand-dark mt-1 mb-3">Psicopedagogia Clínica</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6 font-light">
+                            Avaliação e intervenção nas dificuldades de aprendizagem, foco e desenvolvimento cognitivo de forma lúdica.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs sm:text-sm text-brand-dark">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Dificuldades de alfabetização e leitura</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Suporte para TDAH e desatenção</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Estímulo de funções cognitivas</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Sala lúdica estruturada para crianças</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-brand-border">
+                        <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20saber%20mais%20sobre%20Psicopedagogia." target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold hover:text-brand-gold-hover group">
+                            <span>Agendar Avaliação Infantil</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Orientação Parental & Família -->
+                <div class="bg-white rounded-2xl p-8 border border-brand-border custom-shadow card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-gold-light text-brand-gold flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-7 h-7"></i>
+                        </div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold">Mães, Pais & Famílias</span>
+                        <h3 class="font-serif text-2xl font-semibold text-brand-dark mt-1 mb-3">Orientação Parental</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6 font-light">
+                            Apoio prático e acolhedor para a rotina familiar, manejo de comportamentos desafiadores e fortalecimento de vínculos.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs sm:text-sm text-brand-dark">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Desafios da maternidade e paternidade</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Manejo de birras e limites respeitosos</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Comunicação não violenta na família</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0"></i>
+                                <span>Alinhamento escola-família</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-brand-border">
+                        <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Orienta%C3%A7%C3%A3o%20Parental." target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold hover:text-brand-gold-hover group">
+                            <span>Agendar Orientação</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- O CONSULTÓRIO / GALERIA DO ESPAÇO -->
+    <section id="espaco" class="py-20 bg-white border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-gold uppercase block mb-2">Estrutura Pensada no Seu Conforto</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-medium">
+                        Conheça a Clínica Florescer
+                    </h2>
+                </div>
+                <p class="text-brand-muted text-sm sm:text-base max-w-md">
+                    Ambientes projetados para transmitir calma, privacidade e estímulo no momento certo, com salas exclusivas para adultos e crianças.
+                </p>
+            </div>
+
+            <!-- Photos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Sala Adulto -->
+                <div class="group relative rounded-2xl overflow-hidden border border-brand-border custom-shadow h-80 bg-brand-sand/30">
+                    <img src="assets/images/consultorio-adulto.png" alt="Sala de Atendimento para Adultos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-brand-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5 text-white">
+                        <span class="text-[11px] uppercase tracking-wider font-semibold text-brand-gold bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full inline-block mb-2">Sala Adultos</span>
+                        <h3 class="font-serif text-xl font-medium">Espaço Terapêutico Adulto</h3>
+                        <p class="text-xs text-brand-sand/90 mt-1">Conforto acústico, luz natural e poltronas ergonômicas para sua escuta.</p>
+                    </div>
+                </div>
+
+                <!-- Sala Psicopedagogia / Lúdica 1 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-brand-border custom-shadow h-80 bg-brand-sand/30">
+                    <img src="assets/images/consultorio-infantil-1.png" alt="Sala de Psicopedagogia e Recursos Lúdicos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-brand-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5 text-white">
+                        <span class="text-[11px] uppercase tracking-wider font-semibold text-brand-gold bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full inline-block mb-2">Sala Infantil</span>
+                        <h3 class="font-serif text-xl font-medium">Espaço Psicopedagógico Lúdico</h3>
+                        <p class="text-xs text-brand-sand/90 mt-1">Jogos pedagógicos, lousa interativa e livros para estímulo cognitivo.</p>
+                    </div>
+                </div>
+
+                <!-- Sala Psicopedagogia 2 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-brand-border custom-shadow h-80 bg-brand-sand/30">
+                    <img src="assets/images/consultorio-infantil-2.png" alt="Ambiente acolhedor com ripado de madeira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-brand-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-5 left-5 right-5 text-white">
+                        <span class="text-[11px] uppercase tracking-wider font-semibold text-brand-gold bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full inline-block mb-2">Ambiente Integrado</span>
+                        <h3 class="font-serif text-xl font-medium">Mobiliário Infantil & Adulto</h3>
+                        <p class="text-xs text-brand-sand/90 mt-1">Design pensado para acolher pais e filhos com aconchego.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Features Bar -->
+            <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 bg-brand-bg rounded-2xl border border-brand-border">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                    <span class="text-xs sm:text-sm font-medium text-brand-dark">Fácil Acesso em Ribeirão Preto</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="wifi" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                    <span class="text-xs sm:text-sm font-medium text-brand-dark">Atendimento Online Seguro</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="coffee" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                    <span class="text-xs sm:text-sm font-medium text-brand-dark">Recepção Aconchegante</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="lock" class="w-5 h-5 text-brand-gold shrink-0"></i>
+                    <span class="text-xs sm:text-sm font-medium text-brand-dark">Total Confidencialidade</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODALIDADES DE ATENDIMENTO (Presencial & Online) -->
+    <section class="py-20 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-gold uppercase block mb-2">Flexibilidade & Praticidade</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-medium">
+                    Escolha o formato que melhor se adapta à sua rotina
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Presencial -->
+                <div class="bg-white rounded-3xl p-8 border border-brand-border custom-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3.5 py-1 rounded-full bg-brand-gold-light text-brand-gold text-xs font-bold uppercase tracking-wider">
+                                Presencial
+                            </span>
+                            <i data-lucide="map-pin" class="w-6 h-6 text-brand-gold"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-brand-dark mb-3">Atendimento em Consultório</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Viva uma experiência presencial completa em nosso consultório em Ribeirão Preto, em um ambiente planejado para o relaxamento e foco pleno na sua sessão.
+                        </p>
+                        <ul class="space-y-3 text-sm text-brand-dark mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i>
+                                <span>Ambiente imersivo e livre de distrações</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i>
+                                <span>Recursos lúdicos físicos para crianças</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i>
+                                <span>Estacionamento e localização privilegiada</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20agendar%20uma%20consulta%20presencial." target="_blank" rel="noopener" class="w-full text-center bg-brand-dark hover:bg-brand-dark/90 text-white font-medium py-3.5 rounded-full transition-colors">
+                        Agendar Presencial
+                    </a>
+                </div>
+
+                <!-- Online -->
+                <div class="bg-white rounded-3xl p-8 border border-brand-border custom-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3.5 py-1 rounded-full bg-brand-rose/60 text-brand-dark text-xs font-bold uppercase tracking-wider">
+                                Online
+                            </span>
+                            <i data-lucide="video" class="w-6 h-6 text-brand-gold"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-brand-dark mb-3">Sessões Online</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Faça sua terapia no conforto e privacidade do seu lar ou onde estiver, com a mesma eficácia clínica e sigilo do atendimento presencial.
+                        </p>
+                        <ul class="space-y-3 text-sm text-brand-dark mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i>
+                                <span>Economia de tempo e deslocamento</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i>
+                                <span>Plataforma criptografada de alta segurança</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i>
+                                <span>Atendimento para brasileiros em qualquer lugar</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20agendar%20uma%20consulta%20online." target="_blank" rel="noopener" class="w-full text-center bg-brand-gold hover:bg-brand-gold-hover text-white font-medium py-3.5 rounded-full transition-colors shadow-md">
+                        Agendar Sessão Online
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES (FAQ) -->
+    <section id="faq" class="py-20 bg-brand-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-gold uppercase block mb-2">Tire suas dúvidas</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-medium">
+                    Perguntas Frequentes
+                </h2>
+                <div class="w-12 h-0.5 bg-brand-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- Item 1 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg sm:text-xl font-medium text-brand-dark focus:outline-none">
+                        <span>Como funciona a primeira sessão de psicoterapia?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-gold shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm sm:text-base font-light leading-relaxed border-t border-brand-border/40 pt-4">
+                        A primeira sessão é uma entrevista inicial de acolhimento. Nela, conversamos sobre o que te motivou a buscar ajuda, suas principais queixas e expectativas. É também o momento para você me conhecer, entender a metodologia do processo e tirar todas as suas dúvidas.
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg sm:text-xl font-medium text-brand-dark focus:outline-none">
+                        <span>Qual a diferença entre a Psicologia e a Psicopedagogia?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-gold shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm sm:text-base font-light leading-relaxed border-t border-brand-border/40 pt-4">
+                        A <strong>Psicologia Clínica</strong> foca nas emoções, comportamentos, relações, traumas e bem-estar mental geral. Já a <strong>Psicopedagogia</strong> é especializada nos processos de aprendizagem humana: investiga como o indivíduo assimila o conhecimento, identifica bloqueios (como dislexia, TDAH, dificuldades pedagógicas) e estimula o desenvolvimento cognitivo. Ter ambas as especialidades permite um olhar 360º para a criança e para o adulto.
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg sm:text-xl font-medium text-brand-dark focus:outline-none">
+                        <span>Como funciona a terapia online? Tem a mesma validade?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-gold shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm sm:text-base font-light leading-relaxed border-t border-brand-border/40 pt-4">
+                        Sim! A psicoterapia online é regulamentada pelo Conselho Federal de Psicologia (CFP) e tem a mesma eficácia comprovada do atendimento presencial. As sessões ocorrem por videochamada em plataforma segura e sigilosa, necessitando apenas de uma conexão estável e um local privativo.
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg sm:text-xl font-medium text-brand-dark focus:outline-none">
+                        <span>Você atende por convênio médico?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-gold shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm sm:text-base font-light leading-relaxed border-t border-brand-border/40 pt-4">
+                        Os atendimentos são particulares para garantir um tempo adequado, personalização profunda e dedicação exclusiva a cada paciente. No entanto, fornecemos recibos e documentações completas para que você solicite o <strong>reembolso</strong> junto ao seu plano de saúde.
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="bg-white rounded-2xl border border-brand-border overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg sm:text-xl font-medium text-brand-dark focus:outline-none">
+                        <span>Como funciona a avaliação psicopedagógica para crianças?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-brand-gold shrink-0 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm sm:text-base font-light leading-relaxed border-t border-brand-border/40 pt-4">
+                        A avaliação envolve sessões com os pais (anamnese), sessões diagnósticas lúdicas com a criança (aplicação de testes, jogos, observação do raciocínio e escrita) e, quando necessário, contato com a escola. Ao final, é entregue um relatório detalhado com a devolutiva e plano de intervenção.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO & CONTATO / GOOGLE MAPS -->
+    <section class="py-20 bg-white border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-gold uppercase block">Localização Privilegiada</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-medium">
+                        Venha conhecer a Clínica Mylena Caroline
+                    </h2>
+                    
+                    <p class="text-brand-muted text-base leading-relaxed font-light">
+                        Localizada em um ponto de fácil acesso em Ribeirão Preto, com toda a tranquilidade e estrutura que você merece.
+                    </p>
+
+                    <div class="space-y-4 pt-4 border-t border-brand-border">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-brand-gold-light text-brand-gold shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-brand-dark">Endereço</h3>
+                                <p class="text-xs sm:text-sm text-brand-muted mt-0.5">Ribeirão Preto - SP, Brasil</p>
+                                <a href="https://www.google.com/maps/place/Mylena+Caroline+Alves,+Psic%C3%B3loga/@-21.1902113,-47.7927004,776m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94b9bf9ba5526c05:0x8e3c7f2a56bbd870!8m2!3d-21.1902113!4d-47.7927004!16s%2Fg%2F11wnv84g8m?authuser=0&hl=pt-BR&entry=ttu" target="_blank" rel="noopener" class="text-xs text-brand-gold font-semibold hover:underline inline-flex items-center gap-1 mt-1">
+                                    <span>Abrir no Google Maps</span>
+                                    <i data-lucide="external-link" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-brand-gold-light text-brand-gold shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-brand-dark">Horário de Atendimento</h3>
+                                <p class="text-xs sm:text-sm text-brand-muted mt-0.5">Segunda a Sexta: 08h às 19h (Com agendamento prévio)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-brand-gold-light text-brand-gold shrink-0">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-brand-dark">Agendamento Direto</h3>
+                                <p class="text-xs sm:text-sm text-brand-muted mt-0.5">Atendimento ágil pelo WhatsApp para tirar dúvidas e reservar horários.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20hor%C3%A1rios." target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold-hover text-white font-medium px-8 py-3.5 rounded-full shadow-md transition-all">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>Consultar Horários Disponíveis</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Card Preview -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-bg rounded-3xl p-4 border border-brand-border custom-shadow overflow-hidden">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=-21.1902113,-47.7927004&hl=pt-BR&z=16&output=embed" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 1rem;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização do Consultório Dra. Mylena Caroline Alves">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            
+            <div class="w-16 h-16 rounded-full bg-white/10 border border-white/20 text-brand-gold flex items-center justify-center mx-auto mb-6">
+                <span class="font-serif text-3xl font-bold">Ψ</span>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-5xl font-medium leading-tight mb-6">
+                Dê o primeiro passo para o seu <span class="gold-gradient-text">bem-estar e florescimento</span>.
+            </h2>
+
+            <p class="text-brand-sand text-base sm:text-lg font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Você não precisa carregar suas angústias sozinho(a). Agende sua consulta e inicie sua jornada de transformação com acompanhamento profissional e humano.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Quero%20dar%20o%20primeiro%20passo%20e%20agendar%20minha%20sess%C3%A3o." target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-gold-hover text-white font-medium text-base px-9 py-4 rounded-full shadow-lg hover:shadow-brand-gold/30 transition-all transform hover:-translate-y-0.5">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Conversar no WhatsApp</span>
+                </a>
+
+                <a href="https://www.instagram.com/psimylenacarolinealves/" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 border border-white/30 text-white font-medium text-base px-8 py-4 rounded-full transition-colors">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    <span>Conhecer o Instagram</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1F1A18] text-[#A89E97] py-12 text-xs sm:text-sm border-t border-[#332A26]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#332A26]">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center text-brand-gold">
+                        <span class="font-serif text-lg font-bold">Ψ</span>
+                    </div>
+                    <div>
+                        <span class="font-serif text-lg font-semibold text-white block">Mylena Caroline Alves</span>
+                        <span class="text-[11px] text-[#A89E97]">Psicóloga & Psicopedagoga • Clínica Florescer</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="#inicio" class="hover:text-white transition-colors">Início</a>
+                    <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
+                    <a href="#atuacao" class="hover:text-white transition-colors">Atuação</a>
+                    <a href="#espaco" class="hover:text-white transition-colors">Consultório</a>
+                    <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#827872]">
+                <p>© 2026 Clínica Mylena Caroline - Todos os direitos reservados.</p>
+                <p class="flex items-center gap-1">
+                    <span>Desenvolvido com carinho para saúde mental</span>
+                    <i data-lucide="heart" class="w-3.5 h-3.5 text-brand-gold fill-brand-gold"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON WITH BADGE -->
+    <aside aria-label="Atendimento rápido" class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <div class="hidden sm:flex bg-white px-4 py-2 rounded-full shadow-lg border border-brand-border items-center gap-2 text-xs font-medium text-brand-dark animate-fade-in">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>Online para agendamentos</span>
+        </div>
+        
+        <a href="https://wa.me/5516999999999?text=Ol%C3%A1%2C%20Dra.%20Mylena!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas." target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp" class="relative group flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition-all duration-300 transform group-hover:scale-110">
+            <div class="absolute -inset-1 rounded-full bg-emerald-500/30 pulse-effect pointer-events-none"></div>
+            <i data-lucide="message-circle" class="w-7 h-7 relative z-10 fill-white/20"></i>
+        </a>
+    </aside>
+
+    <!-- JS Scripts for Interactivity -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // FAQ Accordion Behavior
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.faq-icon');
+                const isOpen = !content.classList.contains('hidden');
+
+                // Close all other accordions
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu on click link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
